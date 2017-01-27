@@ -38,6 +38,10 @@ class Dog : CustomStringConvertible, SameProtocol{
         print("woof woof")
     }
     
+    func getInstance() -> Dog{
+        return self
+    }
+    
     func puppyBark(whattosay: String) -> String{
         return "Woof woof "  + whattosay
     }
