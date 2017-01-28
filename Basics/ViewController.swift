@@ -9,6 +9,13 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SDWebImage
+
+struct Post{
+    var id: String;
+    var url: String;
+    var username: String;
+}
 
 class ViewController: UITableViewController {
 
@@ -21,7 +28,9 @@ class ViewController: UITableViewController {
     var iss : Int!
     var delegate: SameProtocol?
     
-    var items = [String]()
+    var items = [Post]()
+    var iv = UIImageView()
+    
     
     private func test() {
         
@@ -52,7 +61,10 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//         Do any additional setup after loading the view, typically from a nib.
+//        
+        tableView.estimatedRowHeight = 500
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         doNetworking(url: "https://api.unsplash.com/photos?client_id=a9172a9ca876442d28612830fc0ea7ca903367e8a98d5464872417840f14aedf&page=1")
         
@@ -72,15 +84,16 @@ class ViewController: UITableViewController {
         var json = JSON(data: networkdata)
         for i in 0...9{
             let id = json[i]["id"]
-            let url = json[i]["urls"]["raw"]
+            let url = json[i]["urls"]["small"]
+            let username = json[i]["user"]["username"]
             
-            items.append(id.description)
+            items.append(Post(id: id.description, url: url.description, username: username.description))
             
             print("id is \(id.description) and url is \(url)")
         }
         
         for item in items{
-            print("Item: " + item)
+            print("Item: " + item.url)
         }
         
         tableView.reloadData()
@@ -95,9 +108,22 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        cell?.textLabel?.text = items[indexPath.row]
+        let label = cell?.viewWithTag(1) as! UILabel
+        label.text = items[indexPath.row].username
+        let imageView = cell?.viewWithTag(2) as! UIImageView
+        let Url = URL(string: items[indexPath.row].url)
+        imageView.sd_setImage(with: Url, placeholderImage: UIImage.init(named: "image1.png"))
+        let placeholder = UIImage.init(named: "image1.png")
+        
+        //cell?.sizeThatFits((image.image?.size)!)
+        //image.sd_setImage(with: )
+        //cell?.textLabel?.text = items[indexPath.row]
         //print((items[indexPath.row]) + "Whats up")
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
 

@@ -10,6 +10,7 @@
 		429D366BF4D0EE4D2FA20074 /* Pods_BasicsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0556150AF9E4750085DC3733 /* Pods_BasicsTests.framework */; };
 		460546541E3A718D005DEB23 /* README.me in Resources */ = {isa = PBXBuildFile; fileRef = 460546531E3A718D005DEB23 /* README.me */; };
 		460546561E3A7242005DEB23 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 460546551E3A7242005DEB23 /* .gitignore */; };
+		463F6CB71E3B202D0067AE73 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 463F6CB61E3B202D0067AE73 /* image1.png */; };
 		467B7EB11E3A3BF600F562CB /* SameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467B7EB01E3A3BF600F562CB /* SameProtocol.swift */; };
 		467B7EB31E3A3E2B00F562CB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467B7EB21E3A3E2B00F562CB /* SecondViewController.swift */; };
 		46C437631E39DD5F00CC7C10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C437621E39DD5F00CC7C10 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		3C657C267B2BCD3C25D2D645 /* Pods-Basics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Basics/Pods-Basics.debug.xcconfig"; sourceTree = "<group>"; };
 		460546531E3A718D005DEB23 /* README.me */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.me; sourceTree = "<group>"; };
 		460546551E3A7242005DEB23 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		463F6CB61E3B202D0067AE73 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
 		467B7EB01E3A3BF600F562CB /* SameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SameProtocol.swift; sourceTree = "<group>"; };
 		467B7EB21E3A3E2B00F562CB /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		46C4375F1E39DD5F00CC7C10 /* Basics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 		46C437611E39DD5F00CC7C10 /* Basics */ = {
 			isa = PBXGroup;
 			children = (
+				463F6CB61E3B202D0067AE73 /* image1.png */,
 				46C437621E39DD5F00CC7C10 /* AppDelegate.swift */,
 				46C437641E39DD5F00CC7C10 /* ViewController.swift */,
 				46C437931E39DEA100CC7C10 /* Dog.swift */,
@@ -302,6 +305,7 @@
 				460546561E3A7242005DEB23 /* .gitignore in Resources */,
 				46C437701E39DD5F00CC7C10 /* LaunchScreen.storyboard in Resources */,
 				46C4376D1E39DD5F00CC7C10 /* Assets.xcassets in Resources */,
+				463F6CB71E3B202D0067AE73 /* image1.png in Resources */,
 				46C437681E39DD5F00CC7C10 /* Main.storyboard in Resources */,
 				460546541E3A718D005DEB23 /* README.me in Resources */,
 			);
